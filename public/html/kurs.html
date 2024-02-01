@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/kurs.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container1">
+        <img src="../image/OWRLogo.png" alt="Logo Wasserrettung">
+        <div class="uebschriften">
+            <h1>Österreichische Wasserrettung LV Steiermark</h1>
+            <h2>Kursbuchungssystem/Schwimmkurse</h2>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="kursinfo">
+            <div class="kurinfo_block">
+                <div class="box">
+                    <span class="material-symbols-outlined"> calendar_month </span>
+                    <a>Datum</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="datum"></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> schedule </span>
+                    <a>Uhrzeit</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="uhrzeit"></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> euro </span>
+                    <a>Preis</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="preis"></a>
+                        <span class="material-symbols-outlined"> euro </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> location_on </span>
+                    <a>Ort</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="ort"></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> person </span>
+                    <a>Veranstalter</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="veranstalter">ÖWR-Graz</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> mail </span>
+                    <a>E-Mail</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="mail">lukas@freyler.at</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <span class="material-symbols-outlined"> phone_iphone </span>
+                    <a>Telefonnummer</a>
+                    <div class="line"></div>
+                    <div class="beschreibung">
+                        <a id="tel">0664 / 3500427</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttonbox">
+            <button onclick="showModal()">ANMELDEN</button>
+        </div>
+
+        <div  class="kurstext">
+            <h1 class="kursname"></h1>
+            <a id="text"></a>
+        </div>
+    </div>
+
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <div class="head">
+                <div class="close">
+                    <span class="material-symbols-outlined" onclick="closeModal('customModal')">close</span>
+                </div>
+                <div class="mec-month-divider">
+                    <span>KURS BUCHEN</span>
+                </div>
+            </div>
+            <div class="body">
+                <img src="../image/ticket-icon.png" alt="Ticket Icon">
+                <a class="kursname"></a>
+                <div class="inputdiv">
+                    <input id="ticketanzahl" type="number" value="1" min="1" max="5">
+                    <div id="plaetzea">
+                        <a>Freie Plätze: </a>
+                        <a id="plaetze"> 5 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button onclick="openformular()">
+                    <a>WEITER</a>
+                    <span class="material-symbols-outlined"> arrow_right_alt </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="customModalFormular" class="formular">
+        <div class="formular-content">
+            <div class="head">
+                <div class="close">
+                    <span class="material-symbols-outlined" onclick="closeModal('customModalFormular')">close</span>
+                </div>
+                <div class="mec-month-divider">
+                    <span>TEILNEHMERFORMULAR</span>
+                </div>
+            </div>
+            <div class="body">
+                <a>Name</a>
+                <div class="lineformular"></div>
+                <div class="block">
+                    <select id="geschlecht" class="dropdown">
+                        <option value="herr">Herr</option>
+                        <option value="frau">Frau</option>
+                        <option value="divers">Divers</option>
+                    </select>
+                    <input id="vorname" type="text" placeholder="Vorname">
+                    <input id="nachname" type="text" placeholder="Nachname">
+                </div>
+                <a>Geburtsdatum</a>
+                <div class="lineformular"></div>
+                <div class="block">
+                    <input id="geburtsdatum" type="date" placeholder="Geburtsdatum">
+                </div>
+                <a>Kontaktdaten</a>
+                <div class="lineformular"></div>
+                <div class="block">
+                    <input id="email" type="email" placeholder="E-Mail">
+                    <input id="telefonnummer" type="tel" placeholder="Telefonnummer">
+                </div>
+                <a>Adresse</a>
+                <div class="lineformular"></div>
+                <div class="block">
+                    <input id="strasse" type="text" placeholder="Straße">
+                    <input id="nr" type="text" placeholder="Nr.">
+                </div>
+                <div class="block">
+                    <input id="plz" type="text" placeholder="PLZ">
+                    <input id="ort" type="text" placeholder="Ort">
+                </div>
+                <a>ARGE Abzeichen</a>
+                <div class="lineformular"></div>
+                <div class="checkblock">
+                    <label>
+                        <input id="fruehschwimmer" type="radio" name="group1" value="Frühschwimmer"> Frühschwimmer
+                    </label>
+                    <br>
+                    <label>
+                        <input id="freischwimmer" type="radio" name="group1" value="Freischwimmer"> Freischwimmer
+                    </label>
+                    <br>
+                    <label>
+                        <input id="fahrtenschwimmer" type="radio" name="group1" value="Fahrtenschwimmer"> Fahrtenschwimmer
+                    </label>
+                    <br>
+                    <label>
+                        <input id="allroundschwimmer" type="radio" name="group1" value="Allroundschwimmer"> Allroundschwimmer
+                    </label>
+                </div>
+                <div class="lineformular"></div>
+                <input type="checkbox" id="agb" name="allroundschwimmer" value="Boat">
+                <label for="vehicle3">Bestätigung der AGB </label><br>
+
+            </div>
+            <div class="footer">
+                <div class="back">
+                    <button>
+                        <span class="material-symbols-outlined"> arrow_left_alt </span>
+                        <a>ZURÜCK</a>
+                    </button>
+                </div>
+                <div class="forward">
+                    <button onclick="funktionformular()">
+                        <a id="weiterbutton">WEITER</a>
+                        <span class="material-symbols-outlined"> arrow_right_alt </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="BookingModal" class="booking">
+        <div class="booking-content">
+            <div class="head">
+                <div class="close">
+                    <span class="material-symbols-outlined" onclick="closeModal('BookingModal')">close</span>
+                </div>
+                <div class="mec-month-divider">
+                    <span>GESAMT</span>
+                </div>
+            </div>
+            <div class="body">
+                <div class="preis">
+                    <a>5x</a>
+                    <a>|</a>
+                    <a class="kursname"></a>
+                    <a>|</a>
+                    <a> 175 </a>
+                    <span class="material-symbols-outlined"> euro </span>
+                </div>
+                <div class="lineformular"></div>
+                <div class="information">
+                    <a>Nach der Buchung erhalten Sie eine E-Mail mit den Zahlungsinformationen.</a>
+                </div>
+                
+            </div>
+            <div class="footer">
+                <div class="back">
+                    <button>
+                        <span class="material-symbols-outlined"> arrow_left_alt </span>
+                        <a>ZURÜCK</a>
+                    </button>
+                </div>
+                <div class="forward">
+                    <button onclick="book()">
+                        <a id="weiterbutton">KURS BUCHEN</a>
+                        <span class="material-symbols-outlined"> arrow_right_alt </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container4"></div>
+    <script src="../js/kurs.js"></script>
+</body>
+</html>

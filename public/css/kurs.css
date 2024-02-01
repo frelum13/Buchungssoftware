@@ -1,0 +1,459 @@
+@media screen and (min-width: 768px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:  #1c60ab;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container1, .container2, .container3, .container4 {
+        max-width: 1200px;
+    }
+    .container1 {
+        display: flex;
+        width: 80%;
+        height: 10%;
+        border-radius: 4px;
+        background-color: #fff;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+                    0 2px 2px rgba(0,0,0,0.15),
+                    0 4px 4px rgba(0,0,0,0.15),
+                    0 8px 8px rgba(0,0,0,0.15)
+    }
+    .container1 div {
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        height: 100%;
+    } 
+    .container1 img {
+        margin: 10px;
+        margin-right: 20px;
+        max-width: 100%;
+    }
+    .container1 h1,
+    .container1 h2 {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container2 {
+        height: 80%;
+        width: 80%;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+
+    .kursinfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background-color: #d5d3d3;
+        margin: auto;
+    }
+
+    .kurinfo_block {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        gap: 10px;
+    }
+
+    .box {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .line {
+        margin-top: 2px;
+        width: 100%;
+        height: 1.5px;
+        background-color: #d3d2d2;
+    }
+
+    .box a{
+        margin-top: 2px;
+        font-weight: 700;
+    }
+
+    
+
+    .buttonbox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #d5d3d3;
+        padding-bottom: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    .beschreibung {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    .beschreibung .material-symbols-outlined{
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .kurstext {
+        height: 593px;
+        overflow-y: auto;
+    }
+
+    .container4 {
+        height: 40px;
+        width: 90%;
+        background-color: black;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    /* Fenster zum auswählen der Ticket anzahlen */
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 400px;
+        height: 250px;
+        text-align: center;
+    }
+
+    .head {
+        height: 35%;
+    }
+    .close {
+        display: flex;
+        justify-content: right;
+    }
+
+    .close span {
+        font-size: 20px;
+        border: 1px solid;
+        border-color: gray;
+        border-radius: 5px;
+    }
+
+    .close span:hover {
+        cursor: pointer;
+        background-color: red;
+        color: white;
+    }
+
+    .modal .body {
+        height: 45%;
+        display: flex;
+        align-items: center;
+    }
+    .modal .body img{
+        width: 40px;
+        margin-right: 10px;
+    }
+    .modal .body a{
+        margin-right: 40px;
+    }
+    .modal .inputdiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal .inputdiv input{
+        height: 25px;
+        width: 60px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .modal .inputdiv a{
+        display: block; 
+        margin: 0 auto;
+        font-size: 12px;
+        color: rgb(146, 146, 146);
+    }
+    
+    #plaetzea {
+        display: flex;
+    }
+
+    .mec-month-divider {
+        text-align: center;
+        margin: 10px 0 40px 0;
+    }
+
+    .mec-month-divider span { 
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 700;
+        padding-bottom: 5px;
+        color: #313131;
+        border-bottom: 4px solid #ebebeb;
+        width: 100%;
+        display: block;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .mec-month-divider span:before {
+        border-bottom: 4px solid #1c60ab;
+        font-size: 6px;
+        content: "";
+        text-align: center;
+        position: absolute;
+        bottom: -4px;
+        margin-left: -30px;
+        left: 50%;
+        width:60px
+    }
+
+    .modal .footer {
+        display: flex;
+        height: 20%;
+        justify-content: right;
+    }
+
+    .footer button {
+        display: flex;
+        align-items: center;
+        color: rgb(30, 115, 190);
+        background: rgba(30, 115, 190, 0.5);
+        border-color:  rgb(30, 115, 190);
+    }
+    .footer button:hover {
+        cursor: pointer;
+        background: rgba(30, 190, 89, 0.5);
+        color: rgb(13, 92, 42);
+    }
+    .footer button a{
+        margin-right: 20px;
+    }
+
+    /* Fenster zum auswählen der Ticket anzahlen */
+
+    .formular {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .formular-content {
+        background-color: #fff;
+        width: 80%;
+        height: auto;
+        max-width: 600px;
+        margin: 50px auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .formular .head {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 80px;
+    }
+    
+    .formular .body {
+        padding: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .formular .block {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .formular .label {
+        display: block;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .formular .lineformular {
+        height: 1px;
+        background-color: #dddbdb;
+        margin: 8px 0;
+    }
+    
+    .formular .dropdown,
+    .formular input[type="text"],
+    .formular input[type="email"],
+    .formular input[type="tel"]{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .formular input[type="date"]{
+        width: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .formular .footer {
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .back {
+        float: left;
+    }
+    
+    .forward {
+        float: right;
+    }    
+    
+    .formular .footer .forward {
+        display: flex;
+    }
+    
+    .formular .footer .back {
+        display: flex;
+    }
+
+    .formular .footer .back button:hover{
+        cursor: pointer;
+        background: rgba(201, 191, 1, 0.5);
+        color: rgb(190, 185, 30);
+    }
+
+    /* Fenster zum auswählen der Ticket anzahlen */
+
+    .booking {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .booking-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        border: 1px solid #888;
+        width: 450px;
+        height: 260px;
+        text-align: center;
+    }
+    
+    .booking .head {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .booking .body{
+        height: 110px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .booking .body .preis{
+        height: 20px;
+        font-size: 15px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .preis .material-symbols-outlined{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .information {
+        background-color: rgba(255, 166, 0, 0.564);
+        color: red;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .booking .lineformular {
+        height: 1px;
+        background-color: #dddbdb;
+        margin: 8px 0;
+    }
+    .booking .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
